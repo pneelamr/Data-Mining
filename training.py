@@ -1,32 +1,30 @@
-from __future__ import print_function
-
-import logging
-import numpy as np
-from optparse import OptionParser
-import sys
-from time import time
-import matplotlib.pyplot as plt
-
-import warnings
-warnings.filterwarnings("ignore")
+# Author: Padma Neelamraju <pneelamr@gmail.com>
+# Sample taken from http://scikit-learn.org
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.feature_selection import SelectKBest, chi2
-from sklearn.linear_model import RidgeClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
-from sklearn.linear_model import SGDClassifier
-from sklearn.linear_model import Perceptron
-from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.naive_bayes import BernoulliNB, MultinomialNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neighbors import NearestCentroid
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.extmath import density
 from sklearn import metrics
+import numpy as np
+from optparse import OptionParser
+import sys
+from time import time
+import matplotlib.pyplot as plt
+
+
 
 from sklearn.model_selection import GridSearchCV
+import logging
+import warnings
+
+warnings.filterwarnings("ignore")
 
 # Display progress logs on stdout
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(message)s')
